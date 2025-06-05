@@ -4,7 +4,7 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'         # <--- also works w/o this line, optional 
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:<your-account-id>:certificate/xxxx  # <--- add this line, ACM cert 
-    alb.ingress.kubernetes.io/scheme: internet-facing  # <--- dd this line, w/o it LB will work only internal 
+    alb.ingress.kubernetes.io/scheme: internet-facing  # <--- add this line, w/o it LB will work only internally 
     alb.ingress.kubernetes.io/target-type: ip   # <--- add this line, w/o it you need to create NodePort type for k8s svc
     meta.helm.sh/release-name: astronomer
     meta.helm.sh/release-namespace: astronomer
